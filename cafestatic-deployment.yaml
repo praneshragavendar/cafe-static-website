@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: cafestatic
+  namespace: fluxcd  # <--- Added this line
   labels:
     app: cafestatic
 spec:
@@ -16,6 +17,7 @@ spec:
     spec:
       containers:
       - name: cafestatic
-        image: pranesh6/cafewebimage:final
+        image: pranesh6/cafe-static-website:latest
         ports:
         - containerPort: 80
+
