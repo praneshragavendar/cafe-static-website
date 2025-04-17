@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: cafestatic
-  namespace: fluxcd  # <--- Added this line
+  namespace: cafe-static-argo  # <--- Added this line
   labels:
     app: cafestatic
 spec:
